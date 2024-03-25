@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .card{
+            background-color: gray;
+            color: white;
+            width: 15%;
+            padding: 10px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        #img1{
+            margin-left: 42%;
+        }
+        #img2{
+            margin-left: 42%;
+        }
+        #btn{
+            margin-left: 50px;
+            padding: 5px;
+        }
+        #btn1{
+            margin-left: 30px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img id="img1" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" height="300px" width="200px">
+    </div>
+    <div>
+        <img id="img2" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png" height="200px" width="200px">
+    </div>
+    <div class="card">
+        <center><p>Switched Off</p></center>
+        <button id="btn" onclick="off()">OFF</button>
+        <button id="btn1" onclick="on()">ON</button>
+    </div>
+    <script>
+        function off(){
+            document.getElementById("btn").style.backgroundColor="white"
+            document.getElementById("btn1").style.backgroundColor="green"
+            document.querySelector("p").textContent="Switched Off"
+            document.getElementById("img1").src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png"
+            document.getElementById("img2").src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png"
+            
+        }
+        function on(){
+            document.getElementById("btn1").style.backgroundColor="white"
+            document.getElementById("btn").style.backgroundColor="red"
+            document.querySelector("p").textContent="Switched On"
+            document.getElementById("img1").src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png"
+            document.getElementById("img2").src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png"
+            
+        }
+    </script>
+</body>
+</html>
